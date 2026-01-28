@@ -1,10 +1,9 @@
 <div align="center">
 
 <h1>Retrieval-based-Voice-Conversion-WebUI</h1>
-一个基于VITS的简单易用的变声框架<br><br>
+VITSに基づく使いやすい音声変換（voice changer）framework<br><br>
 
-[![madewithlove](https://img.shields.io/badge/made_with-%E2%9D%A4-red?style=for-the-badge&labelColor=orange
-)](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI)
+[![madewithlove](https://img.shields.io/badge/made_with-%E2%9D%A4-red?style=for-the-badge&labelColor=orange)](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI)
 
 <img src="https://counter.seku.su/cmoe?name=rvc&theme=r34" /><br>
 
@@ -14,20 +13,24 @@
 
 [![Discord](https://img.shields.io/badge/RVC%20Developers-Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/HcsmBBGyVk)
 
-[**更新日志**](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/blob/main/docs/Changelog_CN.md) | [**常见问题解答**](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94) | [**AutoDL·5毛钱训练AI歌手**](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/wiki/Autodl%E8%AE%AD%E7%BB%83RVC%C2%B7AI%E6%AD%8C%E6%89%8B%E6%95%99%E7%A8%8B) | [**对照实验记录**](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/wiki/Autodl%E8%AE%AD%E7%BB%83RVC%C2%B7AI%E6%AD%8C%E6%89%8B%E6%95%99%E7%A8%8B](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/wiki/%E5%AF%B9%E7%85%A7%E5%AE%9E%E9%AA%8C%C2%B7%E5%AE%9E%E9%AA%8C%E8%AE%B0%E5%BD%95)) | [**在线演示**](https://modelscope.cn/studios/FlowerCry/RVCv2demo)
+[**更新日誌**](./Changelog_JA.md) | [**よくある質問**](./faq_ja.md) | [**AutoDL·5 円で AI 歌手をトレーニング**](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/wiki/Autodl%E8%AE%AD%E7%BB%83RVC%C2%B7AI%E6%AD%8C%E6%89%8B%E6%95%99%E7%A8%8B) | [**対照実験記録**](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/wiki/%E5%AF%B9%E7%85%A7%E5%AE%9E%E9%AA%8C%C2%B7%E5%AE%9E%E9%AA%8C%E8%AE%B0%E5%BD%95) | [**オンラインデモ**](https://modelscope.cn/studios/FlowerCry/RVCv2demo)
 
-[**English**](./docs/en/README.en.md) | [**中文简体**](./README.md) | [**日本語**](./docs/jp/README.ja.md) | [**한국어**](./docs/kr/README.ko.md) ([**韓國語**](./docs/kr/README.ko.han.md)) | [**Français**](./docs/fr/README.fr.md) | [**Türkçe**](./docs/tr/README.tr.md) | [**Português**](./docs/pt/README.pt.md)
+[**English**](../en/README.en.md) | [**中文简体**](../../README.md) | [**日本語**](../jp/README.ja.md) | [**한국어**](../kr/README.ko.md) ([**韓國語**](../kr/README.ko.han.md)) | [**Français**](../fr/README.fr.md) | [**Türkçe**](../tr/README.tr.md) | [**Português**](../pt/README.pt.md)
 
 </div>
 
-> 底模使用接近50小时的开源高质量VCTK训练集训练，无版权方面的顾虑，请大家放心使用
+> デモ動画は[こちら](https://www.bilibili.com/video/BV1pm4y1z7Gm/)でご覧ください。
 
-> 请期待RVCv3的底模，参数更大，数据更大，效果更好，基本持平的推理速度，需要训练数据量更少。
+> RVC によるリアルタイム音声変換: [w-okada/voice-changer](https://github.com/w-okada/voice-changer)
+
+> 著作権侵害を心配することなく使用できるように、基底モデルは約 50 時間の高品質なオープンソースデータセットで訓練されています。
+
+> RVCv3 の基底モデルルをご期待ください。より大きなパラメータ、より大きなデータ、より良い効果を提供し、基本的に同様の推論速度を維持しながら、トレーニングに必要なデータ量はより少なくなります。
 
 <table>
    <tr>
-		<td align="center">训练推理界面</td>
-		<td align="center">实时变声界面</td>
+		<td align="center">トレーニングと推論インターフェース</td>
+		<td align="center">リアルタイム音声変換インターフェース</td>
 	</tr>
   <tr>
 		<td align="center"><img src="https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/assets/129054828/092e5c12-0d49-4168-a590-0b0ef6a4f630"></td>
@@ -38,176 +41,217 @@
 		<td align="center">go-realtime-gui.bat</td>
 	</tr>
   <tr>
-    <td align="center">可以自由选择想要执行的操作。</td>
-		<td align="center">我们已经实现端到端170ms延迟。如使用ASIO输入输出设备，已能实现端到端90ms延迟，但非常依赖硬件驱动支持。</td>
+    <td align="center">実行したい操作を自由に選択できます。</td>
+		<td align="center">既に端から端までの170msの遅延を実現しました。ASIO入出力デバイスを使用すれば、端から端までの90msの遅延を達成できますが、ハードウェアドライバーのサポートに非常に依存しています。</td>
 	</tr>
 </table>
 
-## 简介
-本仓库具有以下特点
-+ 使用top1检索替换输入源特征为训练集特征来杜绝音色泄漏
-+ 即便在相对较差的显卡上也能快速训练
-+ 使用少量数据进行训练也能得到较好结果(推荐至少收集10分钟低底噪语音数据)
-+ 可以通过模型融合来改变音色(借助ckpt处理选项卡中的ckpt-merge)
-+ 简单易用的网页界面
-+ 可调用UVR5模型来快速分离人声和伴奏
-+ 使用最先进的[人声音高提取算法InterSpeech2023-RMVPE](#参考项目)根绝哑音问题。效果最好（显著地）但比crepe_full更快、资源占用更小
-+ A卡I卡加速支持
+## はじめに
 
-点此查看我们的[演示视频](https://www.bilibili.com/video/BV1pm4y1z7Gm/) !
+本リポジトリには下記の特徴があります。
 
-## 环境配置
-以下指令需在 Python 版本大于3.8的环境中执行。  
+- Top1 検索を用いることで、生の特徴量を訓練用データセット特徴量に変換し、トーンリーケージを削減します。
+- 比較的貧弱な GPU でも、高速かつ簡単に訓練できます。
+- 少量のデータセットからでも、比較的良い結果を得ることができます。（10 分以上のノイズの少ない音声を推奨します。）
+- モデルを融合することで、音声を混ぜることができます。（ckpt processing タブの、ckpt merge を使用します。）
+- 使いやすい WebUI。
+- UVR5 Model も含んでいるため、人の声と BGM を素早く分離できます。
+- 最先端の[人間の声のピッチ抽出アルゴリズム InterSpeech2023-RMVPE](#参照プロジェクト)を使用して無声音問題を解決します。効果は最高（著しく）で、crepe_full よりも速く、リソース使用が少ないです。
+- A カードと I カードの加速サポート
 
-### Windows/Linux/MacOS等平台通用方法
-下列方法任选其一。
-#### 1. 通过 pip 安装依赖
-1. 安装Pytorch及其核心依赖，若已安装则跳过。参考自: https://pytorch.org/get-started/locally/
+私たちの[デモビデオ](https://www.bilibili.com/video/BV1pm4y1z7Gm/)をチェックしてください！
+
+## 環境構築
+
+下記のコマンドは、Python3.8 以上の環境で実行する必要があります:
+
+### Windows/Linux/MacOS などのプラットフォーム共通方法
+
+以下の方法のいずれかを選択してください。
+
+#### 1. pip を通じた依存関係のインストール
+
+1. Pytorch 及びその主要な依存関係のインストール、すでにインストールされている場合はスキップ。参照：https://pytorch.org/get-started/locally/
+
 ```bash
 pip install torch torchvision torchaudio
 ```
-2. 如果是 win 系统 + Nvidia Ampere 架构(RTX30xx)，根据 #21 的经验，需要指定 pytorch 对应的 cuda 版本
+
+2. win システム + Nvidia Ampere アーキテクチャ（RTX30xx）の場合、#21 の経験に基づいて pytorch に対応する cuda バージョンを指定
+
 ```bash
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117
 ```
-3. 根据自己的显卡安装对应依赖
-- N卡
+
+3. 自分のグラフィックカードに合わせた依存関係のインストール
+
+- N カード
+
 ```bash
 pip install -r requirements.txt
 ```
-- A卡/I卡
+
+- A カード/I カード
+
 ```bash
 pip install -r requirements-dml.txt
 ```
-- A卡ROCM(Linux)
+
+- A カード ROCM(Linux)
+
 ```bash
 pip install -r requirements-amd.txt
 ```
-- I卡IPEX(Linux)
+
+- I カード IPEX(Linux)
+
 ```bash
 pip install -r requirements-ipex.txt
 ```
 
-#### 2. 通过 poetry 来安装依赖
-安装 Poetry 依赖管理工具，若已安装则跳过。参考自: https://python-poetry.org/docs/#installation
+#### 2. poetry を通じた依存関係のインストール
+
+Poetry 依存関係管理ツールのインストール、すでにインストールされている場合はスキップ。参照：https://python-poetry.org/docs/#installation
+
 ```bash
 curl -sSL https://install.python-poetry.org | python3 -
 ```
 
-通过 Poetry 安装依赖时，python 建议使用 3.7-3.10 版本，其余版本在安装 llvmlite==0.39.0 时会出现冲突
+poetry を使って依存関係をインストール
+
 ```bash
-poetry init -n
-poetry env use "path to your python.exe"
-poetry run pip install -r requirments.txt
+poetry install
 ```
 
 ### MacOS
-可以通过 `run.sh` 来安装依赖
+
+`run.sh`を使って依存関係をインストールできます
+
 ```bash
 sh ./run.sh
 ```
 
-## 其他预模型准备
-RVC需要其他一些预模型来推理和训练。
+## その他の事前訓練されたモデルの準備
 
-你可以从我们的[Hugging Face space](https://huggingface.co/lj1995/VoiceConversionWebUI/tree/main/)下载到这些模型。
+RVC は推論とトレーニングのために他のいくつかの事前訓練されたモデルが必要です。
 
-### 1. 下载 assets
-以下是一份清单，包括了所有RVC所需的预模型和其他文件的名称。你可以在`tools`文件夹找到下载它们的脚本。
+これらのモデルは私たちの[Hugging Face space](https://huggingface.co/lj1995/VoiceConversionWebUI/tree/main/)でダウンロードできます。
+
+### 1. assets のダウンロード
+
+以下は、RVC に必要なすべての事前学習モデルとその他のファイルのリストです。`tools`フォルダーにこれらをダウンロードするスクリプトがあります。
 
 - ./assets/hubert/hubert_base.pt
 
-- ./assets/pretrained 
+- ./assets/pretrained
 
 - ./assets/uvr5_weights
 
-想使用v2版本模型的话，需要额外下载
+v2 バージョンのモデルを使用する場合、追加で以下をダウンロードする必要があります。
 
 - ./assets/pretrained_v2
 
-### 2. 安装 ffmpeg
-若ffmpeg和ffprobe已安装则跳过。
+### 2. ffmpeg のインストール
 
-#### Ubuntu/Debian 用户
+ffmpeg と ffprobe が既にインストールされている場合はスキップします。
+
+#### Ubuntu/Debian ユーザー
+
 ```bash
 sudo apt install ffmpeg
 ```
-#### MacOS 用户
+
+#### MacOS ユーザー
+
 ```bash
 brew install ffmpeg
 ```
-#### Windows 用户
-下载后放置在根目录。
-- 下载[ffmpeg.exe](https://huggingface.co/lj1995/VoiceConversionWebUI/blob/main/ffmpeg.exe)
 
-- 下载[ffprobe.exe](https://huggingface.co/lj1995/VoiceConversionWebUI/blob/main/ffprobe.exe)
+#### Windows ユーザー
 
-### 3. 下载 rmvpe 人声音高提取算法所需文件
+ダウンロード後、ルートディレクトリに配置してください。
 
-如果你想使用最新的RMVPE人声音高提取算法，则你需要下载音高提取模型参数并放置于RVC根目录。
+- [ffmpeg.exe をダウンロード](https://huggingface.co/lj1995/VoiceConversionWebUI/blob/main/ffmpeg.exe)
 
-- 下载[rmvpe.pt](https://huggingface.co/lj1995/VoiceConversionWebUI/blob/main/rmvpe.pt)
+- [ffprobe.exe をダウンロード](https://huggingface.co/lj1995/VoiceConversionWebUI/blob/main/ffprobe.exe)
 
-#### 下载 rmvpe 的 dml 环境(可选, A卡/I卡用户)
+### 3. RMVPE 人間の声のピッチ抽出アルゴリズムに必要なファイルのダウンロード
 
-- 下载[rmvpe.onnx](https://huggingface.co/lj1995/VoiceConversionWebUI/blob/main/rmvpe.onnx)
+最新の RMVPE 人間の声のピッチ抽出アルゴリズムを使用する場合、ピッチ抽出モデルのパラメータをダウンロードして RVC のルートディレクトリに配置する必要があります。
 
-### 4. AMD显卡Rocm(可选, 仅Linux)
+- [rmvpe.pt をダウンロード](https://huggingface.co/lj1995/VoiceConversionWebUI/blob/main/rmvpe.pt)
 
-如果你想基于AMD的Rocm技术在Linux系统上运行RVC，请先在[这里](https://rocm.docs.amd.com/en/latest/deploy/linux/os-native/install.html)安装所需的驱动。
+#### dml 環境の RMVPE をダウンロード(オプション、A カード/I カードユーザー)
 
-若你使用的是Arch Linux，可以使用pacman来安装所需驱动：
-````
+- [rmvpe.onnx をダウンロード](https://huggingface.co/lj1995/VoiceConversionWebUI/blob/main/rmvpe.onnx)
+
+### 4. AMD グラフィックカード Rocm(オプション、Linux のみ)
+
+Linux システムで AMD の Rocm 技術をベースに RVC を実行したい場合、[こちら](https://rocm.docs.amd.com/en/latest/deploy/linux/os-native/install.html)で必要なドライバーを先にインストールしてください。
+
+Arch Linux を使用している場合、pacman を使用して必要なドライバーをインストールできます。
+
+```
 pacman -S rocm-hip-sdk rocm-opencl-sdk
-````
-对于某些型号的显卡，你可能需要额外配置如下的环境变量（如：RX6700XT）：
-````
+```
+
+一部のモデルのグラフィックカード（例：RX6700XT）の場合、以下のような環境変数を追加で設定する必要があるかもしれません。
+
+```
 export ROCM_PATH=/opt/rocm
 export HSA_OVERRIDE_GFX_VERSION=10.3.0
-````
-同时确保你的当前用户处于`render`与`video`用户组内：
-````
+```
+
+同時に、現在のユーザーが`render`および`video`ユーザーグループに属していることを確認してください。
+
+```
 sudo usermod -aG render $USERNAME
 sudo usermod -aG video $USERNAME
-````
+```
 
-## 开始使用
-### 直接启动
-使用以下指令来启动 WebUI
+## 使用開始
+
+### 直接起動
+
+以下のコマンドで WebUI を起動します
 ```bash
 python infer-web.py
 ```
 
-若先前使用 Poetry 安装依赖，则可以通过以下方式启动WebUI
-```bash
-poetry run python infer-web.py
-```
+### 統合パッケージの使用
 
-### 使用整合包
-下载并解压`RVC-beta.7z`
-#### Windows 用户
-双击`go-web.bat`
-#### MacOS 用户
+`RVC-beta.7z`をダウンロードして解凍
+
+#### Windows ユーザー
+
+`go-web.bat`をダブルクリック
+
+#### MacOS ユーザー
+
 ```bash
 sh ./run.sh
 ```
-### 对于需要使用IPEX技术的I卡用户(仅Linux)
+
+### IPEX 技術が必要な I カードユーザー向け(Linux のみ)
+
 ```bash
 source /opt/intel/oneapi/setvars.sh
 ```
 
-## 参考项目
-+ [ContentVec](https://github.com/auspicious3000/contentvec/)
-+ [VITS](https://github.com/jaywalnut310/vits)
-+ [HIFIGAN](https://github.com/jik876/hifi-gan)
-+ [Gradio](https://github.com/gradio-app/gradio)
-+ [FFmpeg](https://github.com/FFmpeg/FFmpeg)
-+ [Ultimate Vocal Remover](https://github.com/Anjok07/ultimatevocalremovergui)
-+ [audio-slicer](https://github.com/openvpi/audio-slicer)
-+ [Vocal pitch extraction:RMVPE](https://github.com/Dream-High/RMVPE)
-  + The pretrained model is trained and tested by [yxlllc](https://github.com/yxlllc/RMVPE) and [RVC-Boss](https://github.com/RVC-Boss).
+## 参考プロジェクト
 
-## 感谢所有贡献者作出的努力
+- [ContentVec](https://github.com/auspicious3000/contentvec/)
+- [VITS](https://github.com/jaywalnut310/vits)
+- [HIFIGAN](https://github.com/jik876/hifi-gan)
+- [Gradio](https://github.com/gradio-app/gradio)
+- [FFmpeg](https://github.com/FFmpeg/FFmpeg)
+- [Ultimate Vocal Remover](https://github.com/Anjok07/ultimatevocalremovergui)
+- [audio-slicer](https://github.com/openvpi/audio-slicer)
+- [Vocal pitch extraction:RMVPE](https://github.com/Dream-High/RMVPE)
+  - 事前訓練されたモデルは[yxlllc](https://github.com/yxlllc/RMVPE)と[RVC-Boss](https://github.com/RVC-Boss)によって訓練され、テストされました。
+
+## すべての貢献者の努力に感謝します
+
 <a href="https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/graphs/contributors" target="_blank">
   <img src="https://contrib.rocks/image?repo=RVC-Project/Retrieval-based-Voice-Conversion-WebUI" />
 </a>
