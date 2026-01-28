@@ -6,7 +6,7 @@ readme = "README.md"
 requires-python = "==3.10.*"
 dependencies = [
     "absl-py>=1.2.0",
-    "aria2>=0.0.1b0",
+    "aria2>=0.0.1b0 ; sys_platform != 'darwin'",
     "audioread>=3.1.0",
     "av>=16.1.0",
     "colorama>=0.4.5",
