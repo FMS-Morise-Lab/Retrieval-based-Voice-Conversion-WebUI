@@ -195,6 +195,15 @@ wheels = [
 ]
 
 [[package]]
+name = "blinker"
+version = "1.9.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/21/28/9b3f50ce0e048515135495f198351908d99540d69bfdc8c1d15b73dc55ce/blinker-1.9.0.tar.gz", hash = "sha256:b4ce2265a7abece45e7cc896e98dbebe6cead56bcf805a3d23136d145f5445bf", size = 22460, upload-time = "2024-11-08T17:25:47.436Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/10/cb/f2ad4230dc2eb1a74edf38f1a38b9b52277f75bef262d8908e60d957e13c/blinker-1.9.0-py3-none-any.whl", hash = "sha256:ba0efaa9080b619ff2f3459d1d500c57bddea4a6b424b60a91141db6fd2f08bc", size = 8458, upload-time = "2024-11-08T17:25:46.184Z" },
+]
+
+[[package]]
 name = "certifi"
 version = "2026.1.4"
 source = { registry = "https://pypi.org/simple" }
@@ -442,6 +451,36 @@ wheels = [
 ]
 
 [[package]]
+name = "flask"
+version = "3.1.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "blinker" },
+    { name = "click" },
+    { name = "itsdangerous" },
+    { name = "jinja2" },
+    { name = "markupsafe" },
+    { name = "werkzeug" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/dc/6d/cfe3c0fcc5e477df242b98bfe186a4c34357b4847e87ecaef04507332dab/flask-3.1.2.tar.gz", hash = "sha256:bf656c15c80190ed628ad08cdfd3aaa35beb087855e2f494910aa3774cc4fd87", size = 720160, upload-time = "2025-08-19T21:03:21.205Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ec/f9/7f9263c5695f4bd0023734af91bedb2ff8209e8de6ead162f35d8dc762fd/flask-3.1.2-py3-none-any.whl", hash = "sha256:ca1d8112ec8a6158cc29ea4858963350011b5c846a414cdb7a954aa9e967d03c", size = 103308, upload-time = "2025-08-19T21:03:19.499Z" },
+]
+
+[[package]]
+name = "flask-cors"
+version = "6.0.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "flask" },
+    { name = "werkzeug" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/70/74/0fc0fa68d62f21daef41017dafab19ef4b36551521260987eb3a5394c7ba/flask_cors-6.0.2.tar.gz", hash = "sha256:6e118f3698249ae33e429760db98ce032a8bf9913638d085ca0f4c5534ad2423", size = 13472, upload-time = "2025-12-12T20:31:42.861Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/4f/af/72ad54402e599152de6d067324c46fe6a4f531c7c65baf7e96c63db55eaf/flask_cors-6.0.2-py3-none-any.whl", hash = "sha256:e57544d415dfd7da89a9564e1e3a9e515042df76e12130641ca6f3f2f03b699a", size = 13257, upload-time = "2025-12-12T20:31:41.3Z" },
+]
+
+[[package]]
 name = "flatbuffers"
 version = "25.12.19"
 source = { registry = "https://pypi.org/simple" }
@@ -507,6 +546,21 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/a7/b2/4140c69c6a66432916b26158687e821ba631a4c9273c474343badf84d3ba/future-1.0.0.tar.gz", hash = "sha256:bd2968309307861edae1458a4f8a4f3598c03be43b97521076aebf5d94c07b05", size = 1228490, upload-time = "2024-02-21T11:52:38.461Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/da/71/ae30dadffc90b9006d77af76b393cb9dfbfc9629f339fc1574a1c52e6806/future-1.0.0-py3-none-any.whl", hash = "sha256:929292d34f5872e70396626ef385ec22355a1fae8ad29e1a734c3e43f9fbc216", size = 491326, upload-time = "2024-02-21T11:52:35.956Z" },
+]
+
+[[package]]
+name = "gin"
+version = "0.1.6"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/24/03/e714d1c947680cd722c57dd9a274e9c4f999fb76629a6c2efbee4487607d/gin-0.1.006.tar.bz2", hash = "sha256:0747da840881792f1726f9145094953b0a1499e9b41324a14ca6a10c03baa1ef", size = 2985, upload-time = "2013-03-17T23:44:27.097Z" }
+
+[[package]]
+name = "gin-config"
+version = "0.5.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/b9/c4/5aaf77a77e7a2a1446f20580f8493adea9dcd3befcf61faf7ba5de65d7fc/gin-config-0.5.0.tar.gz", hash = "sha256:0c6ea5026ded927c8c93c990b01c695257c1df446e45e549a158cfbc79e19ed6", size = 56185, upload-time = "2021-11-03T08:11:34.812Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/11/8f/9f1894efa1bb15e98613244b24dfbacfe2309e0ac3cfc27d4c608c2270d2/gin_config-0.5.0-py3-none-any.whl", hash = "sha256:bddb7ca221ea2b46cdb59321e79fecf02d6e3b728906047fcd4076c297609fd6", size = 61327, upload-time = "2021-11-03T08:11:33.435Z" },
 ]
 
 [[package]]
@@ -703,6 +757,15 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/6f/6d/0703ccc57f3a7233505399edb88de3cbd678da106337b9fcde432b65ed60/idna-3.11.tar.gz", hash = "sha256:795dafcc9c04ed0c1fb032c2aa73654d8e8c5023a7df64a53f39190ada629902", size = 194582, upload-time = "2025-10-12T14:55:20.501Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/0e/61/66938bbb5fc52dbdf84594873d5b51fb1f7c7794e9c0f5bd885f30bc507b/idna-3.11-py3-none-any.whl", hash = "sha256:771a87f49d9defaf64091e6e6fe9c18d4833f140bd19464795bc32d966ca37ea", size = 71008, upload-time = "2025-10-12T14:55:18.883Z" },
+]
+
+[[package]]
+name = "itsdangerous"
+version = "2.2.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/9c/cb/8ac0172223afbccb63986cc25049b154ecfb5e85932587206f42317be31d/itsdangerous-2.2.0.tar.gz", hash = "sha256:e0050c0b7da1eea53ffaf149c0cfbb5c6e2e2b69c4bef22c81fa6eb73e5f6173", size = 54410, upload-time = "2024-04-16T21:28:15.614Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/04/96/92447566d16df59b2a776c0fb82dbc4d9e07cd95062562af01e408583fc4/itsdangerous-2.2.0-py3-none-any.whl", hash = "sha256:c6242fc49e35958c8b15141343aa660db5fc54d4f13a1db01a3f5891b98700ef", size = 16234, upload-time = "2024-04-16T21:28:14.499Z" },
 ]
 
 [[package]]
@@ -1043,6 +1106,22 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/fd/1d/06475e1cd5264c0b870ea2cc6fdb3e37177c1e565c43f56ff17a10e3937f/networkx-3.4.2.tar.gz", hash = "sha256:307c3669428c5362aab27c8a1260aa8f47c4e91d3891f48be0141738d8d053e1", size = 2151368, upload-time = "2024-10-21T12:39:38.695Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/b9/54/dd730b32ea14ea797530a4479b2ed46a6fb250f682a9cfb997e968bf0261/networkx-3.4.2-py3-none-any.whl", hash = "sha256:df5d4365b724cf81b8c6a7312509d0c22386097011ad1abe274afd5e9d3bbc5f", size = 1723263, upload-time = "2024-10-21T12:39:36.247Z" },
+]
+
+[[package]]
+name = "noisereduce"
+version = "3.0.3"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "joblib" },
+    { name = "matplotlib" },
+    { name = "numpy" },
+    { name = "scipy" },
+    { name = "tqdm" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/11/08/539e3cff148b7f9bde5b4b060451a7445d708fa3fe5d8a2bc0c552976e52/noisereduce-3.0.3.tar.gz", hash = "sha256:ff64a28fb92e3c81f153cf29550e5c2db56b2523afa8f56f5e03c177cc5e918f", size = 20968, upload-time = "2024-10-06T13:43:45.431Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ce/c5/fc00b3e8f86437039fb300ba41d5d683fdf0878d8782e827c2bad074eb59/noisereduce-3.0.3-py3-none-any.whl", hash = "sha256:95cb64cfe29b5fa0311ac764755d2f503ae71571040693577796412be1a54b9d", size = 22142, upload-time = "2024-10-06T13:43:43.886Z" },
 ]
 
 [[package]]
@@ -1479,6 +1558,15 @@ wheels = [
 ]
 
 [[package]]
+name = "pysimplegui"
+version = "5.0.8.3"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/b8/ee/c7015ee3d5723aec4335608450a5efb96f53953d65d7acd6227b389e905d/pysimplegui-5.0.8.3.tar.gz", hash = "sha256:4c77436f527b6ee5c6e097a07028c83d85dc2513bcb51b78c9bfcc1b55123bd1", size = 15686, upload-time = "2025-04-02T13:25:19.096Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/4d/d9/3de4b7ca71a7779e4f4a160088621b072a29d9b814a7fa9b5411571f4849/pysimplegui-5.0.8.3-py3-none-any.whl", hash = "sha256:67e35ad6dd76e9369051261114f4711308e87815a0488f7fa28b37c29a546f8b", size = 16347, upload-time = "2025-04-02T13:25:17.973Z" },
+]
+
+[[package]]
 name = "python-dateutil"
 version = "2.9.0.post0"
 source = { registry = "https://pypi.org/simple" }
@@ -1635,12 +1723,17 @@ dependencies = [
     { name = "av" },
     { name = "colorama" },
     { name = "cython" },
+    { name = "einops" },
     { name = "fairseq" },
     { name = "faiss-cpu" },
     { name = "fastapi" },
     { name = "ffmpeg-python" },
     { name = "ffmpy" },
+    { name = "flask" },
+    { name = "flask-cors" },
     { name = "fsspec" },
+    { name = "gin" },
+    { name = "gin-config" },
     { name = "gradio" },
     { name = "httpx" },
     { name = "jinja2" },
@@ -1648,9 +1741,11 @@ dependencies = [
     { name = "json5" },
     { name = "librosa" },
     { name = "llvmlite" },
+    { name = "local-attention" },
     { name = "markdown" },
     { name = "matplotlib" },
     { name = "matplotlib-inline" },
+    { name = "noisereduce" },
     { name = "numba" },
     { name = "numpy" },
     { name = "onnxruntime", marker = "sys_platform == 'darwin'" },
@@ -1660,12 +1755,14 @@ dependencies = [
     { name = "pyasn1" },
     { name = "pyasn1-modules" },
     { name = "pydub" },
+    { name = "pysimplegui" },
     { name = "python-dotenv" },
     { name = "pyworld" },
     { name = "pyyaml" },
     { name = "resampy" },
     { name = "scikit-learn" },
     { name = "scipy" },
+    { name = "sounddevice" },
     { name = "soundfile" },
     { name = "sympy" },
     { name = "tabulate" },
@@ -1693,12 +1790,17 @@ requires-dist = [
     { name = "av", specifier = ">=16.1.0" },
     { name = "colorama", specifier = ">=0.4.5" },
     { name = "cython", specifier = ">=3.2.4" },
+    { name = "einops", specifier = ">=0.8.2" },
     { name = "fairseq", specifier = "==0.12.2" },
     { name = "faiss-cpu", specifier = "==1.7.3" },
     { name = "fastapi", specifier = "==0.88" },
     { name = "ffmpeg-python", specifier = ">=0.2.0" },
     { name = "ffmpy", specifier = "==0.3.1" },
+    { name = "flask", specifier = ">=3.1.2" },
+    { name = "flask-cors", specifier = ">=6.0.2" },
     { name = "fsspec", specifier = ">=2022.11.0" },
+    { name = "gin", specifier = ">=0.1.6" },
+    { name = "gin-config", specifier = ">=0.5.0" },
     { name = "gradio", specifier = "==3.34.0" },
     { name = "httpx", specifier = ">=0.28.1" },
     { name = "jinja2", specifier = ">=3.1.2" },
@@ -1706,9 +1808,11 @@ requires-dist = [
     { name = "json5", specifier = ">=0.13.0" },
     { name = "librosa", specifier = "==0.9.1" },
     { name = "llvmlite", specifier = "==0.39.0" },
+    { name = "local-attention", specifier = ">=1.11.2" },
     { name = "markdown", specifier = ">=3.10.1" },
     { name = "matplotlib", specifier = ">=3.7.0" },
     { name = "matplotlib-inline", specifier = ">=0.1.3" },
+    { name = "noisereduce", specifier = ">=3.0.3" },
     { name = "numba", specifier = "==0.56.4" },
     { name = "numpy", specifier = "==1.23.5" },
     { name = "onnxruntime", marker = "sys_platform == 'darwin'", specifier = ">=1.23.2" },
@@ -1718,12 +1822,14 @@ requires-dist = [
     { name = "pyasn1", specifier = ">=0.4.8" },
     { name = "pyasn1-modules", specifier = ">=0.2.8" },
     { name = "pydub", specifier = ">=0.25.1" },
+    { name = "pysimplegui", specifier = ">=5.0.8.3" },
     { name = "python-dotenv", specifier = ">=1.0.0" },
     { name = "pyworld", specifier = "==0.3.2" },
     { name = "pyyaml", specifier = ">=6.0" },
     { name = "resampy", specifier = ">=0.4.2" },
     { name = "scikit-learn", specifier = ">=1.7.2" },
     { name = "scipy", specifier = ">=1.15.3" },
+    { name = "sounddevice", specifier = "<0.5.0" },
     { name = "soundfile", specifier = ">=0.12.1" },
     { name = "sympy", specifier = ">=1.11.1" },
     { name = "tabulate", specifier = ">=0.8.10" },
@@ -1855,6 +1961,21 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/94/e7/b2c673351809dca68a0e064b6af791aa332cf192da575fd474ed7d6f16a2/six-1.17.0.tar.gz", hash = "sha256:ff70335d468e7eb6ec65b95b99d3a2836546063f63acc5171de367e834932a81", size = 34031, upload-time = "2024-12-04T17:35:28.174Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/b7/ce/149a00dd41f10bc29e5921b496af8b574d8413afcd5e30dfa0ed46c2cc5e/six-1.17.0-py2.py3-none-any.whl", hash = "sha256:4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274", size = 11050, upload-time = "2024-12-04T17:35:26.475Z" },
+]
+
+[[package]]
+name = "sounddevice"
+version = "0.4.7"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "cffi" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/0d/88/5832219fa90595932d5f6d1b5125bfd8a55e95b19ad866e265c9bbb7cde4/sounddevice-0.4.7.tar.gz", hash = "sha256:69b386818d50a2d518607d4b973442e8d524760c7cd6c8b8be03d8c98fc4bce7", size = 52244, upload-time = "2024-05-27T19:27:31.663Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/46/ea/e9196f01ec3c5ad537e1bb83fe08da3bacfbdfee8a872c461e491f489801/sounddevice-0.4.7-py3-none-any.whl", hash = "sha256:1c3f18bfa4d9a257f5715f2ab83f2c0eb412a09f3e6a9fa73720886ca88f6bc7", size = 32092, upload-time = "2024-05-27T19:27:26.064Z" },
+    { url = "https://files.pythonhosted.org/packages/1c/9c/d8de668a462b7a326d9f697dfa2adb6fbde07cc468cc7cdcf51cbe975d56/sounddevice-0.4.7-py3-none-macosx_10_6_x86_64.macosx_10_6_universal2.whl", hash = "sha256:d6ddfd341ad7412b14ca001f2c4dbf5fa2503bdc9eb15ad2c3105f6c260b698a", size = 108360, upload-time = "2024-05-27T19:27:27.298Z" },
+    { url = "https://files.pythonhosted.org/packages/96/7f/620dda64a6e7fbdab11ca9065ae72668c78dc331058f51175a62a8fede12/sounddevice-0.4.7-py3-none-win32.whl", hash = "sha256:1ec1df094c468a210113aa22c4f390d5b4d9c7a73e41a6cb6ecfec83db59b380", size = 197641, upload-time = "2024-05-27T19:27:28.615Z" },
+    { url = "https://files.pythonhosted.org/packages/d4/09/bfdd393f1bb1b90b4a6849b84972b7059c95e36818cc489922228d58cc63/sounddevice-0.4.7-py3-none-win_amd64.whl", hash = "sha256:0c8b3543da1496f282b66a7bc54b755577ba638b1af06c146d4ac7f39d86b548", size = 200096, upload-time = "2024-05-27T19:27:30.31Z" },
 ]
 
 [[package]]
