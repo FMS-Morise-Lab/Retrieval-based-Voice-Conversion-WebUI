@@ -1,11 +1,11 @@
 # Retrieval-based-Voice-Conversion-WebUI
 
-このリポジトリは <https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI> を研究室で使用するために最適化したフォークです。
+このリポジトリは <https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI> を研究室で使用するためのフォークです。
 
 ## 環境構築
 
 下記のコマンドは，uv 環境で実行する必要があります。
-本リポジトリでは CUDA 環境のみを想定し，ROCm 環境は想定しません。
+本リポジトリでは CUDA 環境のみを想定し，ROCm 環境・CPU 環境は想定しません。
 
 ```sh
 uv sync
@@ -61,13 +61,7 @@ brew install ffmpeg
 
 - [rmvpe.pt をダウンロード](https://huggingface.co/lj1995/VoiceConversionWebUI/blob/main/rmvpe.pt)
 
-#### dml 環境の RMVPE をダウンロード(オプション、A カード/I カードユーザー)
-
-- [rmvpe.onnx をダウンロード](https://huggingface.co/lj1995/VoiceConversionWebUI/blob/main/rmvpe.onnx)
-
 ## 使用開始
-
-### 直接起動
 
 以下のコマンドで WebUI を起動します
 ```bash
@@ -88,6 +82,6 @@ python infer-web.py
 
 ## すべての貢献者の努力に感謝します
 
-<a href="https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI/graphs/contributors" target="_blank">
-  <img src="https://contrib.rocks/image?repo=RVC-Project/Retrieval-based-Voice-Conversion-WebUI" />
-</a>
+![Contributors to this repo, including those from the original repository.](https://contrib.rocks/image?repo=FMS-Morise-Lab/Retrieval-based-Voice-Conversion-WebUI)
+
+Made with [contrib.rocks](https://contrib.rocks).
