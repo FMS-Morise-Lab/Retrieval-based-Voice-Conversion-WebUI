@@ -4,71 +4,46 @@
 
 ## 環境構築
 
-下記のコマンドは，uv 環境で実行する必要があります。
-本リポジトリでは CUDA 環境のみを想定し，ROCm 環境・CPU 環境は想定しません。
+Python 環境は uv で，事前学習の重みは git-lfs でそれぞれ管理しています。
+また本リポジトリではオリジナルと異なり CUDA 環境のみを想定し，ROCm・CPU 環境は想定していません。
+
+```sh
+$ uv --version
+uv 0.9.26
+```
+
+```sh
+$ git lfs --version
+git-lfs/3.0.2 (GitHub; linux amd64; go 1.18.1)
+```
+
+### Python 依存関係のインストール
 
 ```sh
 uv sync
 ```
 
-## その他の事前訓練されたモデルの準備
+### ffmpeg のインストール
 
-RVC は推論とトレーニングのために他のいくつかの事前訓練されたモデルが必要です。
+Winget (Windows), HomeBrew (MacOS), Apt (Debian, Ubuntu) などから FFmpeg を各自インストールしてください。
 
-これらのモデルは私たちの[Hugging Face space](https://huggingface.co/lj1995/VoiceConversionWebUI/tree/main/)でダウンロードできます。
+```sh
+$ ffmpeg -version
+ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers...
 
-### 1. assets のダウンロード
-
-以下は、RVC に必要なすべての事前学習モデルとその他のファイルのリストです。`tools`フォルダーにこれらをダウンロードするスクリプトがあります。
-
-- ./assets/hubert/hubert_base.pt
-
-- ./assets/pretrained
-
-- ./assets/uvr5_weights
-
-v2 バージョンのモデルを使用する場合、追加で以下をダウンロードする必要があります。
-
-- ./assets/pretrained_v2
-
-### 2. ffmpeg のインストール
-
-ffmpeg と ffprobe が既にインストールされている場合はスキップします。
-
-#### Ubuntu/Debian ユーザー
-
-```bash
-sudo apt install ffmpeg
+$ ffprobe -version
+ffprobe version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2007-2021 the FFmpeg developers...
 ```
-
-#### MacOS ユーザー
-
-```bash
-brew install ffmpeg
-```
-
-#### Windows ユーザー
-
-ダウンロード後、ルートディレクトリに配置してください。
-
-- [ffmpeg.exe をダウンロード](https://huggingface.co/lj1995/VoiceConversionWebUI/blob/main/ffmpeg.exe)
-
-- [ffprobe.exe をダウンロード](https://huggingface.co/lj1995/VoiceConversionWebUI/blob/main/ffprobe.exe)
-
-### 3. RMVPE 人間の声のピッチ抽出アルゴリズムに必要なファイルのダウンロード
-
-最新の RMVPE 人間の声のピッチ抽出アルゴリズムを使用する場合、ピッチ抽出モデルのパラメータをダウンロードして RVC のルートディレクトリに配置する必要があります。
-
-- [rmvpe.pt をダウンロード](https://huggingface.co/lj1995/VoiceConversionWebUI/blob/main/rmvpe.pt)
 
 ## 使用開始
 
 以下のコマンドで WebUI を起動します
+
 ```bash
 python infer-web.py
 ```
 
-## 参考プロジェクト
+## 関連プロジェクト
 
 - [ContentVec](https://github.com/auspicious3000/contentvec/)
 - [VITS](https://github.com/jaywalnut310/vits)
@@ -81,6 +56,8 @@ python infer-web.py
   - 事前訓練されたモデルは[yxlllc](https://github.com/yxlllc/RMVPE)と[RVC-Boss](https://github.com/RVC-Boss)によって訓練され、テストされました。
 
 ## すべての貢献者の努力に感謝します
+
+以下のリストには元リポジトリへの貢献者も含まれます。
 
 ![Contributors to this repo, including those from the original repository.](https://contrib.rocks/image?repo=FMS-Morise-Lab/Retrieval-based-Voice-Conversion-WebUI)
 

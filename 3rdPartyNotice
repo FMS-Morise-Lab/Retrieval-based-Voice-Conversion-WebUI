@@ -43,3 +43,8 @@ MIT License
 PySimpleGUI
 https://github.com/PySimpleGUI/PySimpleGUI/blob/master/license.txt
 LPGLv3 License
+
+
+これらに加え，本リポジトリでは事前学習重みも管理しています。
+https://huggingface.co/lj1995/VoiceConversionWebUI/tree/main
+MIT License
