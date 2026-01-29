@@ -23,27 +23,7 @@ git-lfs/3.0.2 (GitHub; linux amd64; go 1.18.1)
 uv sync
 ```
 
-## その他の事前訓練されたモデルの準備
-
-RVC は推論とトレーニングのために他のいくつかの事前訓練されたモデルが必要です。
-
-これらのモデルは私たちの[Hugging Face space](https://huggingface.co/lj1995/VoiceConversionWebUI/tree/main/)でダウンロードできます。
-
-### 1. assets のダウンロード
-
-以下は、RVC に必要なすべての事前学習モデルとその他のファイルのリストです。`tools`フォルダーにこれらをダウンロードするスクリプトがあります。
-
-- ./assets/hubert/hubert_base.pt
-
-- ./assets/pretrained
-
-- ./assets/uvr5_weights
-
-v2 バージョンのモデルを使用する場合、追加で以下をダウンロードする必要があります。
-
-- ./assets/pretrained_v2
-
-### 2. ffmpeg のインストール
+### ffmpeg のインストール
 
 ffmpeg と ffprobe が既にインストールされている場合はスキップします。
 
