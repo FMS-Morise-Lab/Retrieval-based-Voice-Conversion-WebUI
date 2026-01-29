@@ -4,8 +4,20 @@
 
 ## 環境構築
 
-下記のコマンドは，uv 環境で実行する必要があります。
-本リポジトリでは CUDA 環境のみを想定し，ROCm 環境・CPU 環境は想定しません。
+Python 環境は uv で，事前学習の重みは git-lfs でそれぞれ管理しています。
+また本リポジトリではオリジナルと異なり CUDA 環境のみを想定し，ROCm・CPU 環境は想定していません。
+
+```sh
+$ uv --version
+uv 0.9.26
+```
+
+```sh
+$ git lfs --version
+git-lfs/3.0.2 (GitHub; linux amd64; go 1.18.1)
+```
+
+### Python 依存関係のインストール
 
 ```sh
 uv sync
