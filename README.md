@@ -53,12 +53,6 @@ brew install ffmpeg
 winget install Gyan.FFmpeg
 ```
 
-### 3. RMVPE 人間の声のピッチ抽出アルゴリズムに必要なファイルのダウンロード
-
-最新の RMVPE 人間の声のピッチ抽出アルゴリズムを使用する場合、ピッチ抽出モデルのパラメータをダウンロードして RVC のルートディレクトリに配置する必要があります。
-
-- [rmvpe.pt をダウンロード](https://huggingface.co/lj1995/VoiceConversionWebUI/blob/main/rmvpe.pt)
-
 ## 使用開始
 
 以下のコマンドで WebUI を起動します
