@@ -25,7 +25,7 @@ uv sync
 
 ### ffmpeg のインストール
 
-ffmpeg と ffprobe が既にインストールされている場合はスキップします。
+Winget (Windows), HomeBrew (MacOS), Apt (Debian, Ubuntu) などから FFmpeg を各自インストールしてください。
 
 ```sh
 $ ffmpeg -version
@@ -35,32 +35,15 @@ $ ffprobe -version
 ffprobe version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2007-2021 the FFmpeg developers...
 ```
 
-#### Ubuntu/Debian ユーザー
-
-```bash
-sudo apt install ffmpeg
-```
-
-#### MacOS ユーザー
-
-```zsh
-brew install ffmpeg
-```
-
-#### Windows ユーザー
-
-```pwsh
-winget install Gyan.FFmpeg
-```
-
 ## 使用開始
 
 以下のコマンドで WebUI を起動します
+
 ```bash
 python infer-web.py
 ```
 
-## 参考プロジェクト
+## 関連プロジェクト
 
 - [ContentVec](https://github.com/auspicious3000/contentvec/)
 - [VITS](https://github.com/jaywalnut310/vits)
@@ -73,6 +56,8 @@ python infer-web.py
   - 事前訓練されたモデルは[yxlllc](https://github.com/yxlllc/RMVPE)と[RVC-Boss](https://github.com/RVC-Boss)によって訓練され、テストされました。
 
 ## すべての貢献者の努力に感謝します
+
+以下のリストには元リポジトリへの貢献者も含まれます。
 
 ![Contributors to this repo, including those from the original repository.](https://contrib.rocks/image?repo=FMS-Morise-Lab/Retrieval-based-Voice-Conversion-WebUI)
 
