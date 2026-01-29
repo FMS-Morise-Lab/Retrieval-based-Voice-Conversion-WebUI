@@ -35,6 +35,14 @@ v2 バージョンのモデルを使用する場合、追加で以下をダウ�
 
 ffmpeg と ffprobe が既にインストールされている場合はスキップします。
 
+```sh
+$ ffmpeg -version
+ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers...
+
+$ ffprobe -version
+ffprobe version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2007-2021 the FFmpeg developers...
+```
+
 #### Ubuntu/Debian ユーザー
 
 ```bash
@@ -43,17 +51,15 @@ sudo apt install ffmpeg
 
 #### MacOS ユーザー
 
-```bash
+```zsh
 brew install ffmpeg
 ```
 
 #### Windows ユーザー
 
-ダウンロード後、ルートディレクトリに配置してください。
-
-- [ffmpeg.exe をダウンロード](https://huggingface.co/lj1995/VoiceConversionWebUI/blob/main/ffmpeg.exe)
-
-- [ffprobe.exe をダウンロード](https://huggingface.co/lj1995/VoiceConversionWebUI/blob/main/ffprobe.exe)
+```pwsh
+winget install Gyan.FFmpeg
+```
 
 ### 3. RMVPE 人間の声のピッチ抽出アルゴリズムに必要なファイルのダウンロード
 
