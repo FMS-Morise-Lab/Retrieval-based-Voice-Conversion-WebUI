@@ -43,7 +43,7 @@ ffprobe version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2007-2021 the FFmpeg develo
 以下のコマンドで WebUI を起動します
 
 ```bash
-python infer-web.py
+uv run python infer-web.py
 ```
 
 ## 関連プロジェクト
