@@ -5,7 +5,8 @@
 ## 環境構築
 
 Python 環境は[【uv】](https://docs.astral.sh/uv/getting-started/installation/)で，事前学習の重みは[【git-lfs】](https://docs.github.com/ja/repositories/working-with-files/managing-large-files/installing-git-large-file-storage)でそれぞれ管理しています。
-また本リポジトリではオリジナルと異なり CUDA 環境のみを想定し，ROCm・CPU 環境は想定していません。
+また本リポジトリではオリジナルと異なり CUDA 環境のみを想定し，ROCm 環境は想定していません (CPU は未検証)。
+リポジトリに RVC の weights が含まれているため `git clone` に時間がかかりますが，気長に待ってください。
 
 ```sh
 $ uv --version
@@ -23,12 +24,12 @@ git-lfs/3.0.2 (GitHub; linux amd64; go 1.18.1)
 uv sync
 ```
 
-### ffmpeg のインストール
+### ffmpeg・ffprobeのインストール
 
 [【Winget (Windows)】](https://qiita.com/Tadataka_Takahashi/items/9dcb0cf308db6f5dc31b#%E6%96%B9%E6%B3%951-winget%E3%81%A7%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB),
 [【HomeBrew (MacOS)】](https://formulae.brew.sh/formula/ffmpeg),
 [【Apt (Debian, Ubuntu)】](https://packages.debian.org/trixie/ffmpeg)
-などから FFmpeg を各自インストールしてください。
+などから FFmpeg を各自インストールしてください（ffprobe は ffmpeg をインストールすれば一緒にはいるはずです）。
 
 ```sh
 $ ffmpeg -version
